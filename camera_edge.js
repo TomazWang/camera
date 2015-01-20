@@ -71,7 +71,7 @@
                             {
                                 id: 'photo_paper0',
                                 type: 'rect',
-                                rect: ['-168.4%', '59.1%', '65.8%', '74.5%', 'auto', 'auto'],
+                                rect: ['-166.3%', '59%', '60%', '83.3%', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -82,14 +82,14 @@
                                     id: 'photo0',
                                     type: 'image',
                                     tag: 'img',
-                                    rect: ['6.8%', '7.8%', '86.1%', '61.9%', 'auto', 'auto'],
+                                    rect: ['6.9%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             },
                             {
                                 id: 'photo_paper1',
                                 type: 'rect',
-                                rect: ['229.5%', '74.8%', '65.8%', '74.5%', 'auto', 'auto'],
+                                rect: ['229%', '74.4%', '291px', '364px', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -100,7 +100,7 @@
                                     id: 'photo1',
                                     type: 'image',
                                     tag: 'img',
-                                    rect: ['6.8%', '7.8%', '86.1%', '61.9%', 'auto', 'auto'],
+                                    rect: ['6.8%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
                                     fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             }]
