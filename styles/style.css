@@ -6,6 +6,19 @@
 #memo_words{
     text-align:center;
     color:white;
+    visibility : hidden;
+    display:block;    
     /* font-family:myFirstFont; */
-    
+}
+
+
+body {
+     background-color:#3E1E63;
+     margin:0;
+     padding:0;
+     height:100%;
+}
+
+#Stage_photos {
+    visibility:hidden;
 }
