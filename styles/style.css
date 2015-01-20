@@ -1,0 +1,11 @@
+/*@font-face {*/
+/*    font-family: myFirstFont;*/
+/*    src: url(sansation_light.woff);*/
+/*}*/
+
+#memo_words{
+    text-align:center;
+    color:white;
+    /* font-family:myFirstFont; */
+    
+}
