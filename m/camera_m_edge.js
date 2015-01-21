@@ -3,10 +3,10 @@
 (function (compId) {
 
     "use strict";
-    var im='../images/',
-        aud='../media/',
-        vid='../media/',
-        js='../js/',
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
         fonts = {
         },
         opts = {
@@ -66,12 +66,12 @@
                         {
                             id: 'photos',
                             type: 'group',
-                            rect: ['21.9%', '92px', '485px', '437px', 'auto', 'auto'],
+                            rect: ['16%', '94px', '485px', '437px', 'auto', 'auto'],
                             c: [
                             {
                                 id: 'photo_paper0',
                                 type: 'rect',
-                                rect: ['-166.3%', '59%', '60%', '83.3%', 'auto', 'auto'],
+                                rect: ['-9.8%', '-3.9%', '60%', '83.3%', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -83,13 +83,13 @@
                                     type: 'image',
                                     tag: 'img',
                                     rect: ['6.9%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
-                                    fill: ["rgba(0,0,0,0)",im+"black.jpg",'0px','0px']
+                                    fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             },
                             {
                                 id: 'photo_paper1',
                                 type: 'rect',
-                                rect: ['229%', '74.4%', '291px', '364px', 'auto', 'auto'],
+                                rect: ['46.8%', '25.1%', '291px', '364px', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -101,7 +101,7 @@
                                     type: 'image',
                                     tag: 'img',
                                     rect: ['6.8%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
-                                    fill: ["rgba(0,0,0,0)",im+"black.jpg",'0px','0px']
+                                    fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             }]
                         }
@@ -109,7 +109,7 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '768px', '1350px', 'auto', 'auto'],
+                            rect: ['null', 'null', '768px', '744px', 'auto', 'auto'],
                             sizeRange: ['480px','','',''],
                             overflow: 'hidden',
                             fill: ["rgba(62,30,99,1.00)"]
@@ -135,14 +135,24 @@
                             '0deg'
                         ],
                         [
-                            "eid11",
+                            "eid75",
                             "top",
                             0,
-                            500,
-                            "easeInOutBack",
-                            "${camera_body}",
-                            '-530px',
-                            '0px'
+                            2845,
+                            "swing",
+                            "${photo_paper1}",
+                            '74.36%',
+                            '74.81%'
+                        ],
+                        [
+                            "eid66",
+                            "top",
+                            2845,
+                            459,
+                            "swing",
+                            "${photo_paper1}",
+                            '74.81%',
+                            '25.06%'
                         ],
                         [
                             "eid79",
@@ -205,24 +215,14 @@
                             '1.1%'
                         ],
                         [
-                            "eid75",
-                            "top",
+                            "eid78",
+                            "width",
                             0,
-                            2845,
+                            0,
                             "swing",
                             "${photo_paper1}",
-                            '74.36%',
-                            '74.81%'
-                        ],
-                        [
-                            "eid66",
-                            "top",
-                            2845,
-                            459,
-                            "swing",
-                            "${photo_paper1}",
-                            '74.81%',
-                            '20.6%'
+                            '291px',
+                            '291px'
                         ],
                         [
                             "eid76",
@@ -242,7 +242,7 @@
                             "swing",
                             "${photo_paper1}",
                             '229.48%',
-                            '29.1%'
+                            '46.8%'
                         ],
                         [
                             "eid68",
@@ -265,14 +265,14 @@
                             '1.2%'
                         ],
                         [
-                            "eid13",
-                            "top",
-                            98,
-                            502,
+                            "eid28",
+                            "boxShadow.blur",
+                            1393,
+                            607,
                             "easeInOutBack",
-                            "${main_circle}",
-                            '-511px',
-                            '40px'
+                            "${camera_body}",
+                            '0px',
+                            '16px'
                         ],
                         [
                             "eid34",
@@ -365,24 +365,24 @@
                             '16px'
                         ],
                         [
-                            "eid28",
-                            "boxShadow.blur",
-                            1393,
-                            607,
+                            "eid13",
+                            "top",
+                            98,
+                            502,
                             "easeInOutBack",
-                            "${camera_body}",
-                            '0px',
-                            '16px'
+                            "${main_circle}",
+                            '-511px',
+                            '40px'
                         ],
                         [
-                            "eid78",
-                            "width",
+                            "eid11",
+                            "top",
                             0,
-                            0,
-                            "swing",
-                            "${photo_paper1}",
-                            '291px',
-                            '291px'
+                            500,
+                            "easeInOutBack",
+                            "${camera_body}",
+                            '-530px',
+                            '0px'
                         ],
                         [
                             "eid41",
@@ -415,18 +415,18 @@
                             fill: ['rgba(47,47,47,1.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['7px', '6px', '131px', '131px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bg',
                             stroke: [8, 'rgba(85,85,85,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['7px', '6px', '131px', '131px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash',
                             stroke: [8, 'rgba(0,0,0,1.00)', 'dotted'],
                             type: 'ellipse',
@@ -465,90 +465,90 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['0px', '0px', '131px', '131px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bg',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['2px', '2px', '127px', '127px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy10',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['4px', '4px', '123px', '123px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['6px', '6px', '119px', '119px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy3',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['8px', '8px', '115px', '115px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy4',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['10px', '10px', '111px', '111px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy5',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['14px', '14px', '104px', '104px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy9',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['17px', '17px', '98px', '98px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy8',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['20px', '20px', '92px', '92px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy7',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',
                             fill: ['rgba(47,47,47,0.00)']
                         },
                         {
-                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
-                            borderRadius: ['50%', '50%', '50%', '50%'],
                             rect: ['22px', '22px', '88px', '88px', 'auto', 'auto'],
+                            borderRadius: ['50%', '50%', '50%', '50%'],
+                            transform: [[], ['180'], [0, 0, 0], [1, 1, 1]],
                             id: 'dash_bgCopy6',
                             stroke: [1, 'rgba(0,0,0,1.00)', 'solid'],
                             type: 'ellipse',

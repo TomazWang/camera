@@ -66,12 +66,12 @@
                         {
                             id: 'photos',
                             type: 'group',
-                            rect: ['21.9%', '94px', '485px', '437px', 'auto', 'auto'],
+                            rect: ['16%', '94px', '485px', '437px', 'auto', 'auto'],
                             c: [
                             {
                                 id: 'photo_paper0',
                                 type: 'rect',
-                                rect: ['-166.3%', '59%', '60%', '83.3%', 'auto', 'auto'],
+                                rect: ['-9.8%', '-3.9%', '60%', '83.3%', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -83,13 +83,13 @@
                                     type: 'image',
                                     tag: 'img',
                                     rect: ['6.9%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
-                                    fill: ["rgba(0,0,0,0)",im+"black.jpg",'0px','0px']
+                                    fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             },
                             {
                                 id: 'photo_paper1',
                                 type: 'rect',
-                                rect: ['229%', '74.4%', '291px', '364px', 'auto', 'auto'],
+                                rect: ['46.8%', '25.1%', '291px', '364px', 'auto', 'auto'],
                                 overflow: 'visible',
                                 fill: ["rgba(255,255,255,1.00)"],
                                 stroke: [0,"rgba(0,0,0,1)","none"],
@@ -101,7 +101,7 @@
                                     type: 'image',
                                     tag: 'img',
                                     rect: ['6.8%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
-                                    fill: ["rgba(0,0,0,0)",im+"black.jpg",'0px','0px']
+                                    fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
                                 }]
                             }]
                         }
@@ -109,7 +109,7 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '768px', '100%', 'auto', 'auto'],
+                            rect: ['null', 'null', '768px', '744px', 'auto', 'auto'],
                             sizeRange: ['480px','','',''],
                             overflow: 'hidden',
                             fill: ["rgba(62,30,99,1.00)"]
@@ -135,24 +135,34 @@
                             '0deg'
                         ],
                         [
-                            "eid11",
+                            "eid75",
                             "top",
                             0,
-                            500,
-                            "easeInOutBack",
-                            "${camera_body}",
-                            '-530px',
-                            '0px'
+                            2845,
+                            "swing",
+                            "${photo_paper1}",
+                            '74.36%',
+                            '74.81%'
                         ],
                         [
-                            "eid48",
-                            "left",
-                            2500,
+                            "eid66",
+                            "top",
+                            2845,
                             459,
                             "swing",
-                            "${photo_paper0}",
-                            '-168.45%',
-                            '1.1%'
+                            "${photo_paper1}",
+                            '74.81%',
+                            '25.06%'
+                        ],
+                        [
+                            "eid79",
+                            "height",
+                            0,
+                            0,
+                            "swing",
+                            "${photo_paper1}",
+                            '364px',
+                            '364px'
                         ],
                         [
                             "eid35",
@@ -165,6 +175,16 @@
                             '40px'
                         ],
                         [
+                            "eid71",
+                            "height",
+                            0,
+                            0,
+                            "swing",
+                            "${photo_paper0}",
+                            '83.3%',
+                            '83.3%'
+                        ],
+                        [
                             "eid33",
                             "left",
                             98,
@@ -175,6 +195,46 @@
                             '80px'
                         ],
                         [
+                            "eid69",
+                            "left",
+                            0,
+                            2500,
+                            "swing",
+                            "${photo_paper0}",
+                            '-166.35%',
+                            '-168.45%'
+                        ],
+                        [
+                            "eid48",
+                            "left",
+                            2500,
+                            459,
+                            "swing",
+                            "${photo_paper0}",
+                            '-168.45%',
+                            '1.1%'
+                        ],
+                        [
+                            "eid78",
+                            "width",
+                            0,
+                            0,
+                            "swing",
+                            "${photo_paper1}",
+                            '291px',
+                            '291px'
+                        ],
+                        [
+                            "eid76",
+                            "left",
+                            0,
+                            2845,
+                            "swing",
+                            "${photo_paper1}",
+                            '228.96%',
+                            '229.48%'
+                        ],
+                        [
                             "eid64",
                             "left",
                             2845,
@@ -182,7 +242,17 @@
                             "swing",
                             "${photo_paper1}",
                             '229.48%',
-                            '29.1%'
+                            '46.8%'
+                        ],
+                        [
+                            "eid68",
+                            "top",
+                            0,
+                            2500,
+                            "swing",
+                            "${photo_paper0}",
+                            '58.99%',
+                            '59.09%'
                         ],
                         [
                             "eid50",
@@ -193,6 +263,16 @@
                             "${photo_paper0}",
                             '59.09%',
                             '1.2%'
+                        ],
+                        [
+                            "eid28",
+                            "boxShadow.blur",
+                            1393,
+                            607,
+                            "easeInOutBack",
+                            "${camera_body}",
+                            '0px',
+                            '16px'
                         ],
                         [
                             "eid34",
@@ -265,14 +345,14 @@
                             '54px'
                         ],
                         [
-                            "eid28",
-                            "boxShadow.blur",
-                            1393,
-                            607,
-                            "easeInOutBack",
-                            "${camera_body}",
-                            '0px',
-                            '16px'
+                            "eid73",
+                            "width",
+                            0,
+                            0,
+                            "swing",
+                            "${photo_paper0}",
+                            '60.02%',
+                            '60.02%'
                         ],
                         [
                             "eid26",
@@ -295,14 +375,14 @@
                             '40px'
                         ],
                         [
-                            "eid66",
+                            "eid11",
                             "top",
-                            2845,
-                            459,
-                            "swing",
-                            "${photo_paper1}",
-                            '74.81%',
-                            '20.6%'
+                            0,
+                            500,
+                            "easeInOutBack",
+                            "${camera_body}",
+                            '-530px',
+                            '0px'
                         ],
                         [
                             "eid41",
@@ -557,5 +637,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("camera_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("camera2_edgeActions.js");
 })("EDGE-17128933");
