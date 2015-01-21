@@ -6,6 +6,7 @@ var camTop,memo_words_left;
 
 function before(isMobile, sym) {
     console.log("pre-excute");
+    console.log(isMobile);
     symbol = sym;
 
     if (isMobile) {
