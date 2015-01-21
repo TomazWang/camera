@@ -1,20 +1,22 @@
-var dataUrl = "data/data.json",
-    imgUrl = "images/",
-    includesUrl = "includes/",
-    memo_words_left = "30%",
-    symbol;
+var symbol,photoQueue;
 
-var photoQueue;
+var dataUrl,imgUrl,includesUrl,memo_words_left;
 
 function before(isMobile, sym) {
     console.log("pre-excute");
     symbol = sym;
 
     if (isMobile) {
-        dataUrl = "../data/data.json",
-            memo_words_left = "15%",
-            imgUrl = "../images/",
-            includesUrl = "../includes/";
+        dataUrl = "../data/data.json";
+        memo_words_left = "15%";
+        imgUrl = "../images/";
+        includesUrl = "../includes/";
+    }
+    else {
+        dataUrl = "data/data.json";
+        memo_words_left = "30%";
+        imgUrl = "images/";
+        includesUrl = "includes/";
     }
     getPhotos();
     photoQueue = new Array();
@@ -102,7 +104,7 @@ function showPhoto() {
     // -- showing photos
 
     console.log(photoQueue);
-    
+
     var photo = photoQueue[0];
     photoQueue.shift();
     console.log(photo);
@@ -166,7 +168,7 @@ function showPhoto() {
             top: "-800px",
             visibility: "hidden",
         });
-        
+
         symbol.play("page_start");
     });
 

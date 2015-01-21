@@ -22,7 +22,7 @@
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          sym.stop();
          if (!isInitialized) {
-            $.getScript("includes/main_action.js", function() {
+            $.getScript("../includes/main_action.js", function() {
                before(isMobile, sym);
             });
             isInitialized = true;
