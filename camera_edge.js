@@ -101,7 +101,7 @@
                                     type: 'image',
                                     tag: 'img',
                                     rect: ['6.8%', '5.5%', '85.9%', '68.7%', 'auto', 'auto'],
-                                    fill: ["rgba(0,0,0,0)",im+"black-wallpaper-2.jpg",'0px','0px']
+                                    fill: ["rgba(0,0,0,0)",im+"black.jpg",'0px','0px']
                                 }]
                             }]
                         }

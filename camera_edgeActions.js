@@ -53,14 +53,12 @@
 
          $.getJSON("data/data.json", function(result) {
 
-            console.log(result);
+            // console.log(result);
             var sel = Math.floor(Math.random() * result.length);
             console.log("sel = " + sel);
             someDate = result[sel];
 
             // console.log(someDate);
-
-
 
             // console.log("src for p0 = " + someDate.p1);
             // console.log("src for p1 = " + someDate.p2);
@@ -78,16 +76,22 @@
             // $("#Stage_photo0").css({backgroundImage : "url("+someDate.p0+")",});
             // $("#Stage_photo1").css({backgroundImage : "url("+someDate.p1+")",});
 
-            $("#Stage_photo0").attr("src", someDate.p0);
-            $("#Stage_photo1").attr("src", someDate.p1);
+            // $("#Stage_photo0").attr("src", someDate.p0);
+            // $("#Stage_photo1").attr("src", someDate.p1);
+
+            var img = "images/";
+            var src_p1 = img + someDate.dateCode + "/" + someDate.dateCode + "1.jpg";
+            var src_p2 = img + someDate.dateCode + "/" + someDate.dateCode + "2.jpg";
+         
+            $("#Stage_photo0").attr("src", src_p1);
+            $("#Stage_photo1").attr("src", src_p2);
 
             $("#Stage_photos").css({
                visibility: " visible ",
                top: "94px",
             }).show();
-
-
-            sym.play("photoIn");
+            
+            setTimeout(function(){sym.play("photoIn");}, 200);
 
 
             // -- showing text
@@ -95,7 +99,8 @@
                pos_left = $("#Stage_photos").position().left;
 
             console.log(pos_top + " , " + pos_left);
-            $("#memo_words").text(someDate.txt);
+            $("#memo_title").text(someDate.title);
+            $("#memo_txt").text(someDate.txt);
 
             $("#memo_words").css({
                position: "absolute",
