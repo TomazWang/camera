@@ -18,9 +18,9 @@ function before(isMobile, sym) {
         
     }
     else {
-        dataUrl = "data/data.json";
-        imgUrl = "images/";
-        includesUrl = "includes/";
+        dataUrl = "./data/data.json";
+        imgUrl = "./images/";
+        includesUrl = "./includes/";
         
         memo_words_left = "30%";
         camTop = "30%";
