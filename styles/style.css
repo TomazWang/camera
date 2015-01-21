@@ -5,12 +5,23 @@
 
 #memo_words{
     text-align:center;
-    color:white;
     visibility : hidden;
     display:block;    
     /* font-family:myFirstFont; */
 }
 
+#memo_title{
+    display:block;
+    text-align:center;
+    color:white;
+}
+
+#memo_txt{
+    display:block;
+    text-align:left;
+    color:white;
+    margin-top:5px;
+}
 
 body {
      background-color:#3E1E63;
