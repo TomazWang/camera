@@ -3,10 +3,10 @@
 (function (compId) {
 
     "use strict";
-    var im='images/',
-        aud='media/',
-        vid='media/',
-        js='js/',
+    var im='../images/',
+        aud='../media/',
+        vid='../media/',
+        js='../js/',
         fonts = {
         },
         opts = {
@@ -30,7 +30,7 @@
                         {
                             id: 'Group',
                             type: 'group',
-                            rect: ['50%', '30%', '0%', '0%', 'auto', 'auto'],
+                            rect: ['50%', '20%', '0%', '0%', 'auto', 'auto'],
                             c: [
                             {
                                 id: 'camera_body',
@@ -109,7 +109,7 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '768px', '744px', 'auto', 'auto'],
+                            rect: ['null', 'null', '768px', '1500px', 'auto', 'auto'],
                             sizeRange: ['480px','','',''],
                             overflow: 'hidden',
                             fill: ["rgba(62,30,99,1.00)"]

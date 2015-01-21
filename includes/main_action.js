@@ -1,6 +1,8 @@
 var symbol,photoQueue;
 
-var dataUrl,imgUrl,includesUrl,memo_words_left;
+var dataUrl,imgUrl,includesUrl;
+
+var camTop,memo_words_left;
 
 function before(isMobile, sym) {
     console.log("pre-excute");
@@ -8,15 +10,20 @@ function before(isMobile, sym) {
 
     if (isMobile) {
         dataUrl = "../data/data.json";
-        memo_words_left = "15%";
         imgUrl = "../images/";
         includesUrl = "../includes/";
+        
+        memo_words_left = "15%";
+        memo_words_left = "20%";
+        
     }
     else {
         dataUrl = "data/data.json";
-        memo_words_left = "30%";
         imgUrl = "images/";
         includesUrl = "includes/";
+        
+        memo_words_left = "30%";
+        camTop = "30%";
     }
     getPhotos();
     photoQueue = new Array();
@@ -154,7 +161,7 @@ function showPhoto() {
         // -- turn on camera
         // console.log("turn off camera");
         $("#Stage_Group").css({
-            top: "30%",
+            top: camTop,
             visibility: "visible",
         });
         symbol.play("page_start");
