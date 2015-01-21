@@ -14,7 +14,7 @@ function before(isMobile, sym) {
         includesUrl = "../includes/";
         
         memo_words_left = "15%";
-        memo_words_left = "20%";
+        camTop = "20%";
         
     }
     else {
