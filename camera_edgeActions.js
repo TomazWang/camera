@@ -36,13 +36,13 @@
          console.log("click on camera - from edge animate");
 
          $.getScript("includes/main_action.js", function() {
-            main_action(sym);
+            main_action();
          });
 
       });
 
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "mousedown", function(sym, e) {
-         console.log("mousedown on camera - from edge animate");
+         // console.log("mousedown on camera - from edge animate");
          $("#Stage_camera_body").css("box-shadow", "rgba(0, 0, 0, 0.458824) 0px 0px 0px 0px");
          $("#Stage_camera_body").css("top", "16px").css("left", "23px");
          isCameraDown = true;
@@ -50,7 +50,7 @@
 
 
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "mouseup", function(sym, e) {
-         console.log("mouseup on camera - from edge animate");
+         // console.log("mouseup on camera - from edge animate");
          $("#Stage_camera_body").css("box-shadow", "rgba(0, 0, 0, 0.458824) 23px 16px 16px 0px");
          $("#Stage_camera_body").css("top", "0px").css("left", "0px");
          isCameraDown = false;
@@ -60,7 +60,7 @@
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "mouseout", function(sym, e) {
 
          if (isCameraDown) {
-            console.log("mouseout on camera - from edge animate");
+            // console.log("mouseout on camera - from edge animate");
             $("#Stage_camera_body").css("box-shadow", "rgba(0, 0, 0, 0.458824) 23px 16px 16px 0px");
             $("#Stage_camera_body").css("top", "0px").css("left", "0px");
             isCameraDown = false;

@@ -10,21 +10,29 @@
    var Composition = Edge.Composition,
       Symbol = Edge.Symbol; // aliases for commonly used Edge classes
 
+   var isMobile = true,
+      isInitialized = false;
+
+
    //Edge symbol: 'stage'
    (function(symbolName) {
 
-      var isCameraDown = false,
-            isMobile = true;
-      
-      
-       $.getScript("includes/main_action.js",function() {
-          before(isMobile);
+      var isCameraDown = false;
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+         if (!isInitialized) {
+            $.getScript("includes/main_action.js", function() {
+               before(isMobile, sym);
+            });
+            isInitialized = true;
+         }
       });
-      
+
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
-         
-         $.getScript("../includes/main_action.js",function(){
-            main_action(sym);
+
+         $.getScript("../includes/main_action.js", function() {
+            main_action();
          });
          console.log("click on camera - from edge animate mobile");
 
@@ -59,7 +67,7 @@
 
       });
 
-      
+
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();
       });
