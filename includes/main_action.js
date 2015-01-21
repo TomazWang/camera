@@ -3,10 +3,12 @@ function main_action(sym, isMobile) {
 
     var dataUrl = "data/data.json",
         imgUrl = "images/",
+        memo_words_left = "30%",
         someDate;
 
     if (isMobile) {
         dataUrl = "../data/data.json",
+        memo_words_left = "15%",
         imgUrl = "../images/";
     }
 
@@ -75,7 +77,7 @@ function main_action(sym, isMobile) {
 
 
         // -- showing text
-        var pos_top = $("#Stage_photos").position().top + $("#Stage_photo_paper1").height() + 160,
+        var pos_top = $("#Stage_photos").position().top + $("#Stage_photo_paper1").height() + 120,
             pos_left = $("#Stage_photos").position().left;
 
         console.log(pos_top + " , " + pos_left);
@@ -83,12 +85,21 @@ function main_action(sym, isMobile) {
         $("#memo_txt").text(someDate.txt);
 
         $("#memo_words").css({
+            
             position: "absolute",
             top: (pos_top) + "px",
-            left: (pos_left - 10) + "px",
-            width: ($("#Stage_photos").width() - 20) + "px",
+            // left : ($(window).width()/2 - $("#memo_words").width()) + "px",
+            left : memo_words_left,
             visibility: "visible"
         });
+
+        // $("#memo_words").css({
+        //     position: "absolute",
+        //     top: (pos_top) + "px",
+        //     left: (pos_left) + "px",
+        //     width: ($("#Stage_photos").width() - 50) + "px",
+        //     visibility: "visible"
+        // });
 
 
         $("#Stage_photos").click(function() {
