@@ -6,14 +6,40 @@
  * ability to interact with these actions from within Adobe Edge Animate
  *
  ***********************/
+
 (function($, Edge, compId) {
    var Composition = Edge.Composition,
       Symbol = Edge.Symbol; // aliases for commonly used Edge classes
+
+   var isMobile = true;
+   var isInitialized = false;
+
 
    //Edge symbol: 'stage'
    (function(symbolName) {
 
       var isCameraDown = false;
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+         if (!isInitialized) {
+            $.getScript("includes/main_action.js", function() {
+               before(isMobile, sym);
+            });
+            isInitialized = true;
+         }
+      });
+
+
+      Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
+
+         console.log("click on camera - from edge animate");
+
+         $.getScript("includes/main_action.js", function() {
+            main_action(sym);
+         });
+
+      });
 
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "mousedown", function(sym, e) {
          console.log("mousedown on camera - from edge animate");
@@ -42,15 +68,6 @@
 
       });
 
-      Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
-
-         console.log("click on camera - from edge animate");
-
-         $.getScript("includes/main_action.js", function() {
-               main_action(sym, false);
-         });
-
-      });
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();

@@ -13,7 +13,24 @@
    //Edge symbol: 'stage'
    (function(symbolName) {
 
-      var isCameraDown = false;
+      var isCameraDown = false,
+            isMobile = true;
+      
+      
+       $.getScript("includes/main_action.js",function() {
+          before(isMobile);
+      });
+      
+      Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
+         
+         $.getScript("../includes/main_action.js",function(){
+            main_action(sym);
+         });
+         console.log("click on camera - from edge animate mobile");
+
+      });
+
+
 
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "mousedown", function(sym, e) {
          console.log("mousedown on camera - from edge animate mobile");
@@ -42,15 +59,7 @@
 
       });
 
-      Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
-         
-         $.getScript("../includes/main_action.js",function(){
-            main_action(sym,true);
-         });
-         console.log("click on camera - from edge animate mobile");
-
-      });
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          sym.stop();
       });
