@@ -11,7 +11,7 @@
    var Composition = Edge.Composition,
       Symbol = Edge.Symbol; // aliases for commonly used Edge classes
 
-   var isMobile = true;
+   var isMobile = false;
    var isInitialized = false;
 
 
