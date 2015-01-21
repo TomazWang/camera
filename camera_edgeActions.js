@@ -43,104 +43,13 @@
       });
 
       Symbol.bindElementAction(compId, symbolName, "${camera_body}", "click", function(sym, e) {
+
          console.log("click on camera - from edge animate");
 
-
-         // -- getting photos
-         console.log("get photo...")
-
-         var someDate;
-
-         $.getJSON("data/data.json", function(result) {
-
-            // console.log(result);
-            var sel = Math.floor(Math.random() * result.length);
-            console.log("sel = " + sel);
-            someDate = result[sel];
-
-            // console.log(someDate);
-
-            // console.log("src for p0 = " + someDate.p1);
-            // console.log("src for p1 = " + someDate.p2);
-            // console.log("words for p = " + someDate.txt);
-
-
-            // -- turn off camera button
-            $("#Stage_Group").css({
-               top: "-30%",
-               visibility: "hidden",
-            });
-
-            // -- showing photos
-
-            // $("#Stage_photo0").css({backgroundImage : "url("+someDate.p0+")",});
-            // $("#Stage_photo1").css({backgroundImage : "url("+someDate.p1+")",});
-
-            // $("#Stage_photo0").attr("src", someDate.p0);
-            // $("#Stage_photo1").attr("src", someDate.p1);
-
-            var img = "images/";
-            var src_p1 = img + someDate.dateCode + "/" + someDate.dateCode + "1.jpg";
-            var src_p2 = img + someDate.dateCode + "/" + someDate.dateCode + "2.jpg";
-         
-            $("#Stage_photo0").attr("src", src_p1);
-            $("#Stage_photo1").attr("src", src_p2);
-
-            $("#Stage_photos").css({
-               visibility: " visible ",
-               top: "94px",
-            }).show();
-            
-            setTimeout(function(){sym.play("photoIn");}, 200);
-
-
-            // -- showing text
-            var pos_top = $("#Stage_photos").position().top + $("#Stage_photo_paper1").height() + 160,
-               pos_left = $("#Stage_photos").position().left;
-
-            console.log(pos_top + " , " + pos_left);
-            $("#memo_title").text(someDate.title);
-            $("#memo_txt").text(someDate.txt);
-
-            $("#memo_words").css({
-               position: "absolute",
-               top: (pos_top) + "px",
-               left: (pos_left - 10) + "px",
-               width: ($("#Stage_photos").width() - 20) + "px",
-               visibility: "visible"
-            });
-
-
-            $("#Stage_photos").click(function() {
-
-               // -- turn off text
-               console.log("turn off text");
-
-               $("#memo_words").css({
-                  visibility: "hidden",
-               });
-
-
-               // -- turn on camera
-               console.log("turn off camera");
-               $("#Stage_Group").css({
-                  top: "30%",
-                  visibility: "visible",
-               });
-               sym.play("page_start");
-
-
-
-               // -- turn off photos
-               console.log("turn off photos");
-               $(this).off("click");
-               $(this).css({
-                  top: "-800px",
-                  visibility: "hidden",
-               });
-            });
-
+         $.getScript("includes/main_action.js", function() {
+               main_action(sym, false);
          });
+
       });
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
